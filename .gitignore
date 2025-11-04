@@ -1,0 +1,75 @@
+# Python cache and bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments and local environment files
+.env
+.env.*
+.venv/
+venv/
+env/
+ENV/
+
+# Python packaging and test artifacts
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# Jupyter and editor files
+.ipynb_checkpoints/
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Local raw Borg/Google trace data
+extracted/
+data/
+raw/
+*.csv
+*.csv.gz
+*.tar
+*.tar.gz
+*.tgz
+*.zip
+
+# Generated pipeline artifacts
+artifacts/
+work/
+tmp/
+*.duckdb
+*.duckdb.wal
+*.parquet
+*.log
+*.png
+
+# Local model and analysis artifacts
+*.model
+*.pkl
+*.pickle
+*.joblib
+*.ubj
+
+# Generated outputs are ignored by default. Curated publication outputs under
+# results/borg are explicitly allowed below.
+results/*
+!results/borg/
+!results/borg/README.md
+!results/borg/figures/
+!results/borg/figures/.gitkeep
+!results/borg/*.txt
+!results/borg/*.json
+!results/borg/*.csv
+!results/borg/figures/*.png
