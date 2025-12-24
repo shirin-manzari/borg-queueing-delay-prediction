@@ -1,0 +1,49 @@
+{
+  "status": "pending_local_run",
+  "dataset": {
+    "name": "Google cluster-usage traces",
+    "version": "2",
+    "raw_data_tracked": false
+  },
+  "target": {
+    "name": "queue_delay_seconds",
+    "definition": "first SCHEDULE timestamp - first SUBMIT timestamp",
+    "unit": "seconds",
+    "clip_target_seconds": 7200,
+    "log1p_target": true
+  },
+  "split_strategy": {
+    "key": "job_id",
+    "method": "abs(hash(job_id)) % 100",
+    "train_percent": 80,
+    "valid_percent": 10,
+    "test_percent": 10
+  },
+  "row_counts": {
+    "train": null,
+    "valid": null,
+    "test": null
+  },
+  "baseline_metrics": {
+    "mean_predictor": {
+      "test_mae_seconds": null,
+      "test_rmse_seconds": null
+    },
+    "median_predictor": {
+      "test_mae_seconds": null,
+      "test_rmse_seconds": null
+    }
+  },
+  "model_metrics": {
+    "valid_mae_seconds": null,
+    "valid_rmse_seconds": null,
+    "test_mae_seconds": null,
+    "test_rmse_seconds": null
+  },
+  "source_artifacts": {
+    "model_metrics": "artifacts/model_metrics.json",
+    "evaluation_metrics": "artifacts/evaluation_metrics.json",
+    "baseline_metrics": "artifacts/baseline_metrics.txt",
+    "pretrain_metrics": "artifacts/pretrain_metrics.json"
+  }
+}

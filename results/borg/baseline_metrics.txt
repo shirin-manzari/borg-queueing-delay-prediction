@@ -1,0 +1,16 @@
+Borg queueing-delay baseline metrics
+====================================
+
+Status: pending local run
+
+This file should contain the compact mean and median baseline summary copied
+from artifacts/baseline_metrics.txt after a completed pipeline run.
+
+Expected contents
+-----------------
+- train target distribution summary
+- mean-predictor MAE/RMSE by split
+- median-predictor MAE/RMSE by split
+
+The raw artifact file should remain local unless it is small enough and useful
+for publication.

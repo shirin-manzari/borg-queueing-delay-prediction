@@ -1,0 +1,28 @@
+Borg queueing-delay prediction run metadata
+==========================================
+
+Status: pending local run
+
+Dataset
+-------
+Trace: Google cluster-usage traces, version 2
+Raw data location: extracted/ (not tracked)
+
+Pipeline command
+----------------
+python -m scripts.run_pipeline
+
+Model settings
+--------------
+Model: XGBoost regressor
+Target: first SCHEDULE timestamp - first SUBMIT timestamp
+Target unit: seconds
+Default clip target: 7200 seconds
+Default target transform: log1p enabled
+Split strategy: deterministic job_id hash split, approximately 80/10/10
+
+Notes for publication
+---------------------
+Replace this file after a completed run with the exact command, environment
+settings, row counts, model settings, and artifact timestamps used to produce the
+published summaries.
